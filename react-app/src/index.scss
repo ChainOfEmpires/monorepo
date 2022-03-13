@@ -1,0 +1,356 @@
+html,
+body,
+#root,
+.body-container {
+  max-height: 100%;
+  min-height: 100%;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  #root {
+    width: 100%;
+  }
+
+  .modal-h2 {
+    font-size: 22px;
+    font-weight: bold;
+  }
+  .custom-scrollbar {
+    &::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: darkgrey;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+      background-color: #ed9b28;
+    }
+  }
+
+  .body-container {
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    display: grid;
+    grid-template-columns: minmax(100px, 1fr) auto minmax(100px, 1fr);
+    grid-template-rows: min-content minmax(300px, 1fr) min-content;
+    //overflow: hidden;
+    gap: 20px 8px;
+    grid-template-areas:
+      "nav nav nav"
+      "mainl mainm mainr"
+      "footer footer footer";
+  }
+
+  .nav {
+    grid-area: nav;
+  }
+
+  .main-left-container {
+    grid-area: mainl;
+  }
+
+  .main-middle {
+    grid-area: mainm;
+  }
+
+  .main-right-container {
+    grid-area: mainr;
+  }
+
+  .footer {
+    grid-area: footer;
+  }
+
+  .grid {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 800px;
+    height: 800px;
+    background: #8f9779;
+    margin-bottom: 0;
+    cursor: pointer;
+  }
+
+  .grid:active {
+    cursor: grabbing;
+  }
+
+  .try {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .big {
+    font-size: 36px;
+    font-weight: bold;
+  }
+
+  .selected-territory {
+    border: 1px solid red;
+  }
+
+  .btn {
+    display: block;
+    padding: 12px;
+    background-color: #ed9b28;
+    color: white;
+    font-size: 24px;
+    border: 0;
+    cursor: pointer;
+    border-radius: 6px;
+  }
+
+  .btn-purple {
+    background-color: #7b61ff;
+  }
+
+  .btn-register {
+    margin-left: 8px;
+    font-size: 18px;
+    padding: 7px 16px;
+  }
+
+  img.icon {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .info-box {
+    background: #ffffff;
+    opacity: 0.9;
+    border: 2px solid rgba(0, 0, 0, 0.4);
+    box-sizing: border-box;
+    border-radius: 8px;
+    font-size: 18px;
+    padding: 10px 24px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 35px;
+    color: black;
+  }
+
+  /*===============
+        Main
+  ===============*/
+  .main-middle {
+    .react-transform-component,
+    .react-transform-wrapper {
+      max-height: calc(100% - 86px);
+      max-width: 100%;
+    }
+  }
+
+  .main-left-container {
+    position: relative;
+    height: 100%;
+    padding-left: 59px;
+  }
+
+  .side-content {
+    font-size: 16px;
+    line-height: 30px;
+    color: white;
+    padding: 60px;
+    align-self: center;
+    opacity: 0.85;
+    max-height: 750px;
+    overflow: auto;
+  }
+
+  .soldier-small {
+    margin-left: 10px;
+  }
+
+  .units-input {
+    margin: 0 6px;
+  }
+
+  /*=======
+    Tile
+  =======*/
+
+  .tile-container {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    text-align: center;
+    font-size: 4px;
+    width: 25px;
+    height: 25px;
+    background-image: url("images/free-tile-1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .free-tile-2 {
+    background-image: url("images/free-tile-2.png");
+  }
+
+  .free-tile-3 {
+    background-image: url("images/free-tile-3.png");
+  }
+
+  .free-tile-4 {
+    background-image: url("images/free-tile-4.png");
+  }
+
+  .miniera {
+    background-image: url("images/miniera.png");
+  }
+
+  .tile-top-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .button-gold {
+    margin: 1px 0 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .button-gold span {
+    color: white;
+    font-size: 1pt;
+    margin-top: 1px;
+  }
+
+  .claim-gold {
+    width: 6px;
+    height: 2px;
+    margin-left: 1px;
+    margin-top: 0;
+  }
+
+  .tile-gold-container {
+    display: flex;
+    align-items: center;
+    margin-top: 1px;
+  }
+
+  .tile-bottom-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  .units-container {
+    display: flex;
+    align-items: baseline;
+  }
+
+  .tile-gold {
+    width: 3px;
+    margin-right: 1px;
+  }
+
+  .gold-quantity,
+  .soldiers-quantity {
+    font-size: 1.6px;
+    line-height: 1.6px;
+    color: white;
+    margin-right: 1px;
+  }
+
+  .soldiers-quantity {
+    font-size: 3px;
+    color: white;
+    margin-right: 0;
+    margin-bottom: 1px;
+  }
+
+  .soldiers {
+    width: 4px;
+    margin-left: 1px;
+    margin-bottom: 1px;
+    margin-right: 1px;
+  }
+
+  .coords {
+    font-size: 1.5px;
+    color: white;
+    margin-right: 1px;
+    margin-bottom: 1px;
+  }
+
+  .player {
+    border: 1px solid;
+  }
+
+  @media (max-width: 1800px) {
+    .side-content {
+      font-size: 16px;
+      line-height: 20px;
+      padding: 30px;
+    }
+
+    /*.grid {
+      width: 600px;
+      height: 600px;
+    }
+
+    .tile-container {
+      font-size: 1.8px;
+      width: 18.75px;
+      height: 18.75px;
+    }
+
+    .soldiers {
+      width: 3.2px;
+      height: 4.6px;
+      margin-left: 0.7px;
+      margin-bottom: 0.7px;
+      margin-right: 0.35px;
+    }
+
+    .gold-quantity,
+    .soldiers-quantity {
+      font-size: 1.7px;
+      margin-right: 0.7px;
+    }
+
+    .coords {
+      font-size: 1.7px;
+      color: white;
+      margin-right: 1px;
+      margin-bottom: 1px;
+    }*/
+
+    .info-box {
+      font-size: 18px;
+    }
+  }
+
+  @media (max-width: 1500px) {
+    .side-content {
+      max-height: 500px;
+      padding: 5px 20px;
+      overflow: auto;
+    }
+
+    .info-box {
+      font-size: 18px;
+    }
+
+    .side-content p {
+      margin: 3px;
+    }
+  }
+}

@@ -1,0 +1,88 @@
+/*===============
+        Nav
+  ===============*/
+
+.nav {
+  width: 100%;
+  //display: flex;
+  //justify-content: space-between;
+  color: white;
+  padding: 15px 70px;
+  //align-items: center;
+  display: grid;
+  grid-template-columns: 1fr minmax(200px, 800px) 1fr;
+  gap: 12px 8px;
+  grid-template-areas:
+    ". . .";
+
+  & > div {
+    display: flex;
+  }
+
+  .nav-logo {
+    color: black;
+    font-weight: bold;
+    width: 132px;
+    height: 54px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav-middle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .gold-container,
+  .stamina-container {
+    display: flex;
+    align-items: center;
+    margin: 0 24px;
+  }
+
+  .claim-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .gold,
+  .stamina {
+    margin-right: 25px;
+  }
+
+  .claim {
+    margin-bottom: 0;
+    cursor: pointer;
+  }
+
+  .claim-timeout {
+    margin-top: 4px;
+    font-size: 16px;
+  }
+
+  .nav-right {
+    max-height: 48px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .login {
+    cursor: pointer;
+    white-space: nowrap;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 0 16px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-right .btn-register {
+    cursor: pointer;
+  }
+}

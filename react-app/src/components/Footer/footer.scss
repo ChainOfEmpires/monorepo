@@ -1,0 +1,61 @@
+/*=============
+      Footer
+  =============*/
+
+.footer {
+  color: white;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr minmax(200px, 800px) 1fr;
+  grid-template-areas: ". . .";
+
+  .footer-left {
+    display: flex;
+    align-items: center;
+  }
+
+  .footer-middle {
+    display: flex;
+    justify-content: space-between;
+    width: 800px;
+  }
+
+  .footer-middle .deploy-container,
+  .footer-middle .action-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-middle .deploy-container input,
+  .units-input {
+    width: 90px;
+    height: 40px;
+    margin-top: 0;
+    margin-left: 10px;
+    margin-right: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+    border-radius: 6px;
+    font-size: 24px;
+    text-align: center;
+    font-family: loos-normal, sans-serif;
+  }
+
+  .footer-middle .action-container .btn,
+  .footer-middle .deploy-container .btn {
+    margin: 6px;
+    font-size: 18px;
+    padding: 7px 16px;
+    margin-bottom: 10px;
+  }
+
+  .footer-middle .action-container .soldier-small {
+    height: 40px;
+    width: 15px;
+  }
+
+  input {
+    color: black;
+  }
+}
